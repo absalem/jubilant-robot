@@ -1,9 +1,0 @@
-{
-  "name": "cms-theme",
-  "private": true,
-  "version": "1.0.0",
-  "dependencies": {
-    "normalize-scss": "3.0.*",
-    "jquery": "1.*"
-  }
-}
