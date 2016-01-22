@@ -19,6 +19,7 @@ $susy: (
     column-width: 40px, // false | value
     container: $breakpoint-medium, // length or % | auto
     container-position: center, // left | center | right | <length> [*2] (grid padding)
+
     last-flow: to,
     columns: 12,
     gutters: 1/3,
