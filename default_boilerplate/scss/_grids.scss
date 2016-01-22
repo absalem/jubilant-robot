@@ -1,0 +1,130 @@
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page {
+  @include container;
+  @include span(9 of $nav_layout);
+
+  @media (max-width: $breakpoint-small) {
+    @include span(12 of $nav_layout);
+  }
+}
+
+.side-nav {
+  @include container;
+  @include span(3 of $nav_layout);
+
+  @media (max-width: $breakpoint-small) {
+    @include span(12 of $nav_layout);
+  }
+
+  padding: 20px;
+}
+
+header {
+  @include full;
+
+  .logo {
+    @include span(last 3);
+  }
+
+  .company-name {
+    @include span(7);
+  }
+
+  nav {
+    @include full;
+  }
+
+  .nav-item {
+    @include span(3 of $nav_layout);
+  }
+}
+
+.hero {
+  @include full;
+
+  .why-we-love {
+    @include span(5);
+  }
+
+  .about-web {
+    @include span(last 7) {
+
+    }
+  }
+
+  .in-the-wild {
+    @include span(3 of 7);
+  }
+
+  .in-the-zoo {
+    @include span(last 4 of 7);
+  }
+
+  .in-the-media {
+    @include span(7 of 7) {
+    }
+
+    img {
+      @include span(2 of 7);
+    }
+
+    .copy {
+      @include span(last 5 of 7);
+    }
+  }
+}
+
+.web-gallery {
+  @include full;
+
+  div {
+    @include with-layout($gallery_layout) {
+      @include gallery(4);
+      margin-bottom: gutter();
+    }
+  }
+}
+
+footer {
+  @include with-layout($golden-layout) {
+
+    .web-links {
+      @include span(1 at 1);
+
+      a {
+        color: #008000;
+      }
+
+      @media (max-width: $breakpoint-large) {
+        @include span(1 at 3);
+
+        a {
+          color: #00008b;
+        }
+      }
+    }
+
+    .web-social {
+      @include span(1 at 2);
+
+      .social-link {
+        @include span(1 of 2 25px inside);
+      }
+    }
+
+    .web-partners {
+      @include span(1 at 3);
+
+      @media (max-width: $breakpoint-large) {
+        @include span(1 at 1);
+      }
+    }
+  }
+}
+
